@@ -101,7 +101,7 @@ public class SerPHP implements IBurpExtender, ITab{
         }else if(intMatcher.matches()) {
             data = new PHPInt(jsonText.trim());
         }else if(arrayMatcher.find()){
-            data = new PHPArray(arrayMatcher);
+            data = new PHPArray(jsonText.trim());
         }else{
             txtPHPSerializedInput.setText("***ERROR: Unrecognized format.");
         }
